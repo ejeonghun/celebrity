@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>닮은꼴 연예인 찾기</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+</head>
+<html>
+<body>
+    <div class="nav_bar">
+        <h2 id="title">연예인 닮은꼴 찾기</h2>
+    </div>
+      <div class="container">
+        <div id="image_upload">
+            <input type="file" id="upload" onchange="uploadImage(this)" accept="image/*">
+            <div class="drag-text">
+                <img src="./upload.svg" class="mt-5 pt-5 upload" alt="upload-image" >
+                <h3 class="upload-text">얼굴 사진을 드래그하거나 <br> 눌러서 업로드하세요!</h3>
+                <h4 style="margin-top:10vh">사진은 서버에 저장되지 않습니다.</h4>
+            </div>
+        </div>
+<br><br>
+<div id="result">
+    <div id="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <br>
+      </div>
+    <h2 id="loading_text"></h2>
+    <img id="celebrityImage" src="" alt="">
+    <h1 id="celebrityName"></h1>
+    <h2 id="confidence"></h2>
+</div>
+<footer>
+    <p id="footer_1">Luna WebDev</p>
+    <a href="#"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://main.lunaweb.dev/celebrity&icon=&icon_color=%23FFFFFF&title=%EB%B0%A9%EB%AC%B8%EC%9E%90+%EC%88%98&edge_flat=false"/></a>
+    <a id="footer_2" href="https://github.com/ejeonghun">Dev Github</a>
+</footer>
+</body>
+</html>
