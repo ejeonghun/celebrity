@@ -18,12 +18,26 @@ function uploadImage(input) {
 
                 // 조절된 이미지를 서버에 전송합니다.
                 sendRequest(formData);
+
+                // 사용자가 업로드한 이미지를 result div 태그에 추가합니다.
+                let image = document.createElement('img');
+                image.src = URL.createObjectURL(file);
+                image.style.width = "300px";
+                image.style.height = "300px";
+                document.getElementById("result").appendChild(image);
             });
         } else { // 파일의 크기가 2MB 이하인 경우 그대로 서버에 전송합니다.
             var formData = new FormData();
             formData.append('image', file);
 
             sendRequest(formData);
+
+            // 사용자가 업로드한 이미지를 result div 태그에 추가합니다.
+            let image = document.createElement('img');
+            image.src = URL.createObjectURL(file);
+            image.style.width = "300px";
+            image.style.height = "300px";
+            document.getElementById("result").appendChild(image);
         }
     }
 }
